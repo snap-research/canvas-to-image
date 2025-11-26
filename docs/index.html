@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas2Image: Compositional Image Generation with Multimodal Controls</title>
-    <meta name="description" content="Canvas2Image: Compositional Image Generation with Multimodal Controls">
+    <title>Canvas-to-Image: Compositional Image Generation with Multimodal Controls</title>
+    <meta name="description" content="Canvas-to-Image: Compositional Image Generation with Multimodal Controls">
     
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -80,14 +80,41 @@
         }
 
         .authors {
-            font-size: 1.2em;
+            font-family: 'Google Sans', sans-serif;
+            font-size: 1.1em;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            line-height: 1.7;
             margin-bottom: 20px;
+            color: #2c465c;
+        }
+
+        .authors sup {
+            font-size: 0.7em;
+            font-weight: 500;
+            margin-left: 1px;
+        }
+
+        .authors .equal-contrib {
+            font-size: 0.65em;
+            font-weight: 400;
+            vertical-align: super;
+            margin-left: 0px;
+            line-height: 0;
         }
 
         .affiliations {
-            font-size: 0.9em;
-            color: #4a5a6a;
+            font-family: 'Google Sans', sans-serif;
+            font-size: 1em;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            color: #5a6a7a;
             margin-bottom: 30px;
+        }
+
+        .affiliations sup {
+            font-weight: 600;
+            margin-right: 2px;
         }
 
         .abstract {
@@ -249,16 +276,16 @@
 
     <div class="hero-container">
         <div class="container">
-            <h1 class="title"><span class="gradient-text">Canvas2Image</span>: Compositional Image Generation<br>with Multimodal Controls</h1>
+            <h1 class="title"><span class="gradient-text">Canvas-to-Image</span>: Compositional Image<br>Generation with Multimodal Controls</h1>
             
             <div class="authors">
-                Yusuf Dalva*<sup>1,3</sup>, Guocheng Gordon Qian*<sup>1</sup>, Maya Goldenberg<sup>1</sup>,<br>
-                Tsai-Shien Chen<sup>1,2</sup>, Kfir Aberman<sup>1</sup>, Sergey Tulyakov<sup>1</sup>,<br>
-                Pinar Yanardag<sup>3</sup>, Kuan-Chieh Jackson Wang<sup>1</sup>
+                Yusuf Dalva<span class="equal-contrib">*</span><sup>1,3</sup>, Guocheng Gordon Qian<span class="equal-contrib">*</span><sup>1</sup>, Maya Goldenberg<sup>1</sup>, Tsai-Shien Chen<sup>1,2</sup>,<br>
+                Kfir Aberman<sup>1</sup>, Sergey Tulyakov<sup>1</sup>, Pinar Yanardag<sup>3</sup>, Kuan-Chieh Jackson Wang<sup>1</sup>
             </div>
             
             <div class="affiliations">
-                <sup>1</sup>Snap Inc., <sup>2</sup>UC Merced, <sup>3</sup>Virginia Tech
+                <sup>1</sup>Snap Inc., <sup>2</sup>UC Merced, <sup>3</sup>Virginia Tech<br>
+                <span style="font-size: 0.9em; margin-top: 5px; display: inline-block;">*Equal contribution</span>
             </div>
 
             <div class="btn-group">
@@ -267,27 +294,27 @@
 
             <div class="abstract">
                 <p>
-                    While modern diffusion models excel at generating high-quality and diverse images, they still struggle with high-fidelity compositional and multimodal control. We introduce <strong><span class="gradient-text">Canvas2Image</span></strong>, a unified framework that consolidates these heterogeneous controls into a single canvas interface. Our key insight is to encode diverse control signals, including subject references, bounding boxes, and pose skeletons, into a single composite canvas image that the model can directly interpret for integrated visual-spatial reasoning.
+                    While modern diffusion models excel at generating high-quality and diverse images, they still struggle with high-fidelity compositional and multimodal control. We introduce <strong><span class="gradient-text">Canvas-to-Image</span></strong>, a unified framework that consolidates these heterogeneous controls into a single canvas interface. Our key insight is to encode diverse control signals, including subject references, bounding boxes, and pose skeletons, into a single composite canvas image that the model can directly interpret for integrated visual-spatial reasoning.
                 </p>
             </div>
 
-            <img src="main_figs/teaser.png" alt="Canvas2Image Teaser" class="hero-image">
-            <p class="caption"><span class="gradient-text">Canvas2Image</span> enables compositional control through a unified Multi-Task Canvas framework.</p>
+            <img src="main_figs/teaser.png" alt="Canvas-to-Image Teaser" class="hero-image">
+            <p class="caption"><span class="gradient-text">Canvas-to-Image</span> enables compositional control through a unified Multi-Task Canvas framework.</p>
         </div>
     </div>
 
     <div class="container blog main extra-large gray">
         <h2 style="text-align: center; margin-bottom: 20px;">🎬 User Interface Demo</h2>
         <p style="text-align: center; max-width: 800px; margin: 0 auto 30px auto;">
-            Watch the Canvas2Image user interface in action. See how our unified canvas framework enables intuitive control over compositional image generation with multiple subjects, poses, and spatial layouts.
+            Watch the <span class="gradient-text">Canvas-to-Image</span> user interface in action. See how our unified canvas framework enables intuitive control over compositional image generation with multiple subjects, poses, and spatial layouts.
         </p>
         
-        <video controls style="width: 100%; max-width: 900px; display: block; margin: 0 auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+        <video controls autoplay muted loop playsinline style="width: 100%; max-width: 900px; display: block; margin: 0 auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
             <source src="ui-demo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <p class="caption" style="margin-top: 15px;">
-            Demonstration of the Canvas2Image interface showing compositional control and generation workflow.
+            Demonstration of the <span class="gradient-text">Canvas-to-Image</span> interface showing compositional control and generation workflow.
         </p>
     </div>
 
@@ -306,7 +333,7 @@
             The core of our approach is the <strong>Multi-Task Canvas</strong>, a unified RGB interface that consolidates heterogeneous control signals (spatial placement, pose guidance, box layout) into a single representation. During training, we sample <strong>single-task canvases</strong> where each example focuses on one control modality, allowing the model to learn individual controls deeply while naturally discovering relationships between them. At inference, users can <strong>freely combine multiple control modalities</strong>, a capability never explicitly supervised, enabling seamless integration of identities, poses, and spatial layouts in complex arrangements.
         </p>
         
-        <img src="main_figs/framework.png" alt="Canvas2Image Framework" class="result-image">
+        <img src="main_figs/framework.png" alt="Canvas-to-Image Framework" class="result-image">
         <p class="caption">
             <strong>Framework Overview:</strong> (a) Training on single-task canvases (Spatial, Pose, Box). (b) Inference: composing multiple controls simultaneously for complex multi-subject generation.
         </p>
@@ -315,7 +342,7 @@
     <div class="container blog main extra-large white">
         <h2 style="text-align: center; margin-bottom: 30px;">🔬 Comparisons with State-of-the-Art</h2>
         <p style="text-align: center; max-width: 800px; margin: 0 auto 30px auto;">
-            We compare Canvas2Image against state-of-the-art methods across various challenging scenarios. Our unified canvas approach enables superior compositional control while maintaining identity fidelity and precise spatial placement.
+            We compare <span class="gradient-text">Canvas-to-Image</span> against state-of-the-art methods across various challenging scenarios. Our unified canvas approach enables superior compositional control while maintaining identity fidelity and precise spatial placement.
         </p>
         
         <div class="tab-navigation">
@@ -328,7 +355,7 @@
 
         <div id="multicontrol" class="tab-content active">
             <img src="comparisons/multicontrol.png" alt="Multi-Control Composition Comparison" class="result-image">
-            <p class="caption">Canvas2Image accurately handles identity + pose + layout boxes simultaneously, where baselines often fail.</p>
+            <p class="caption"><span class="gradient-text">Canvas-to-Image</span> accurately handles identity + pose + layout boxes simultaneously, where baselines often fail.</p>
         </div>
 
         <div id="id-obj" class="tab-content">
@@ -338,7 +365,7 @@
 
         <div id="pose-guided" class="tab-content">
             <img src="comparisons/4p_pose.png" alt="Pose Guided Composition Comparison" class="result-image">
-            <p class="caption">Four-person composition with pose control. Canvas2Image maintains distinct identities while following pose constraints.</p>
+            <p class="caption">Four-person composition with pose control. <span class="gradient-text">Canvas-to-Image</span> maintains distinct identities while following pose constraints.</p>
         </div>
 
         <div id="layout-guided" class="tab-content">
@@ -348,14 +375,14 @@
 
         <div id="4p-composition" class="tab-content">
             <img src="comparisons/4p.png" alt="4P Composition Comparison" class="result-image">
-            <p class="caption">Multi-subject generation comparison. Unlike baselines that blend faces in group shots, Canvas2Image maintains distinct identities.</p>
+            <p class="caption">Multi-subject generation comparison. Unlike baselines that blend faces in group shots, <span class="gradient-text">Canvas-to-Image</span> maintains distinct identities.</p>
         </div>
     </div>
 
     <div class="container blog main extra-large white">
         <h2 style="text-align: center; margin-bottom: 30px;">✨ Applications</h2>
         <p style="text-align: center; max-width: 800px; margin: 0 auto 30px auto;">
-            Canvas2Image enables a wide range of compositional generation applications, from single-person pose control to complex multi-subject compositions with background integration.
+            <span class="gradient-text">Canvas-to-Image</span> enables a wide range of compositional generation applications, from single-person pose control to complex multi-subject compositions with background integration.
         </p>
         
         <div class="tab-navigation">
@@ -423,8 +450,8 @@
 
     <div class="container blog main extra-large white">
         <h2>🎓 BibTeX</h2>
-        <pre style="background: #f5f5f5; padding: 20px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 0.9em;"><code>@article{dalva2025canvas2image,
-  title={Canvas2Image: Compositional Image Generation with Multimodal Controls},
+        <pre style="background: #f5f5f5; padding: 20px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 0.9em;"><code>@article{dalva2025canvastoimage,
+  title={Canvas-to-Image: Compositional Image Generation with Multimodal Controls},
   author={Dalva, Yusuf and Qian, Guocheng Gordon and Goldenberg, Maya and 
           Chen, Tsai-Shien and Aberman, Kfir and Tulyakov, Sergey and 
           Yanardag, Pinar and Wang, Kuan-Chieh Jackson},
@@ -434,7 +461,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Canvas2Image Team. All rights reserved.</p>
+        <p>&copy; 2025 <span class="gradient-text">Canvas-to-Image</span> Team. All rights reserved.</p>
         <p style="margin-top: 10px;">
             <a href="#">Paper</a>
         </p>
